@@ -1,0 +1,62 @@
+Gemnote problem
+
+Timing:
+started: 305pm Thursday
+first sample json written: 415pm
+sample json done 440pm
+reading about jsonb in postgres: 455pm
+taking a break to do other stuff: 510pm
+
+restarting: 300pm, Tuesday
+researching nedb as an alternative to postgres for this challenge. Postgres is
+probably preferable for production.
+decision to keep postgres: 310pm
+wrote and tested build_db in Makefile: 325pm
+
+
+
+
+Requirements
+- /products
+  - GET returns a list of products
+  - POST to create a new product
+
+- /products/{product_id}
+  - GET one product
+
+
+Nice to have
+- filter by category (separate db table)
+  - /products?category={category_id}
+- search by string
+  - /products/search?q={string}
+- caching. Probably elasticsearch?
+- pagination
+- versioning
+  - use Accept header, not url
+
+Potential DB implementations
+- SQL
+    - should use EAV model
+    - easy to filter and parse data
+    - data spread over many tables, fetching requires many joins.
+    - more consistent
+- NoSQL
+    - scalable. Don't have column creep with more product types
+    -
+
+Current price tiers
+https://www.gemnote.com/lookbook/the-north-face/440
+50, 150, 300
+
+https://www.gemnote.com/lookbook/tanner-goods/524
+50, 150, 300
+
+Misc
+- both patagonia jacket urls link to black
+- repeat of 'glass' in Kinto description
+- made up category ids
+
+TODO
+- add name to each variant
+- sku could be replaced with uuid because we don't actually need to extract any product data from it
