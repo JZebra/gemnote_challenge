@@ -13,6 +13,8 @@ probably preferable for production.
 decision to keep postgres: 310pm
 wrote and tested build_db in Makefile: 325pm
 git init and commit
+feathers generate app with default options, REST only
+
 
 
 
@@ -65,3 +67,5 @@ Misc
 TODO
 - sku could be replaced with uuid because we don't actually need to extract any product data from it
 - consider using a 'product_group' table and a 'product' table. Each variant becomes a row in the product table.
+- investigate jsonb indexing in postgres.
+-
