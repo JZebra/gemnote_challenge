@@ -12,6 +12,7 @@ researching nedb as an alternative to postgres for this challenge. Postgres is
 probably preferable for production.
 decision to keep postgres: 310pm
 wrote and tested build_db in Makefile: 325pm
+git init and commit
 
 
 
@@ -43,7 +44,11 @@ Potential DB implementations
     - more consistent
 - NoSQL
     - scalable. Don't have column creep with more product types
-    -
+    - reasons for current json format
+      - a 'product' has many variants. Each variant can have its own pricing, descriptors, etc.
+        -  eg. some chocolate bars can be more expensive
+      - weight and dimensions have units, scalable to eventual internationalization
+
 
 Current price tiers
 https://www.gemnote.com/lookbook/the-north-face/440
@@ -58,5 +63,5 @@ Misc
 - made up category ids
 
 TODO
-- add name to each variant
 - sku could be replaced with uuid because we don't actually need to extract any product data from it
+- consider using a 'product_group' table and a 'product' table. Each variant becomes a row in the product table.

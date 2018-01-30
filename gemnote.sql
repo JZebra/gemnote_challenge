@@ -8,6 +8,7 @@ insert into products values (1, '{5}', '{
   "name": "Kinto Carat Coffee Dripper and Pot",
   "variants": [
     {
+      "name": "Kinto Carat Coffee Dripper and Pot",
       "sku": "KINTOCOF_0001",
       "descriptors": [
         "Superior stainless-steel and heat-resistant glass glass",
@@ -59,6 +60,7 @@ insert into products values (2, '{6}', '{
   "name": "Patagonia Hybrid Jacket",
   "variants": [
     {
+      "name": "Patagonia Hybrid Jacket - Black",
       "color": "black",
       "descriptors": [
         "93% polyester/7% spandex stretch woven with fleece grid backer",
@@ -90,6 +92,7 @@ insert into products values (2, '{6}', '{
       ]
     },
     {
+      "name": "Patagonia Hybrid Jacket - White",
       "color": "white",
       "descriptors": [
         "93% polyester/7% spandex stretch woven with fleece grid backer",
@@ -128,6 +131,7 @@ insert into products values (1, '{2}', '{
   "name": "Dick Taylor Bars",
   "variants": [
     {
+      "name": "Dick Taylor Bars - Brown butter with nibs + sea salt",
       "sku": "DICKTAYB_0001",
       "descriptors": [
         "Using the finest cacao, and a modern take on traditional European technique, we are able to fully realize the potential of the beans we source.",
@@ -162,6 +166,7 @@ insert into products values (1, '{2}', '{
       ]
     },
     {
+      "name": "Dick Taylor Bars - Fleur De Sel",
       "sku": "DICKTAYB_0002",
       "descriptors": [
         "Using the finest cacao, and a modern take on traditional European technique, we are able to fully realize the potential of the beans we source.",
@@ -196,6 +201,7 @@ insert into products values (1, '{2}', '{
       ]
     },
     {
+      "name": "Dick Taylor Bars - Black Fig",
       "sku": "DICKTAYB_0003",
       "descriptors": [
         "Using the finest cacao, and a modern take on traditional European technique, we are able to fully realize the potential of the beans we source.",
@@ -230,6 +236,7 @@ insert into products values (1, '{2}', '{
       ]
     },
     {
+      "name": "Dick Taylor Bars - Maple Coconut",
       "sku": "DICKTAYB_0004",
       "descriptors": [
         "Using the finest cacao, and a modern take on traditional European technique, we are able to fully realize the potential of the beans we source.",
