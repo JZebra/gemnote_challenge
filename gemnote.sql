@@ -1,6 +1,5 @@
 create table products (
   id serial PRIMARY KEY,
-  category_ids int[],
   created_at timestamptz NOT NULL,
   updated_at timestamptz NOT NULL,
   flags integer,
@@ -9,7 +8,7 @@ create table products (
 
 set timezone = 'America/Los_Angeles';
 
-insert into products values (1, '{5}', NOW(), NOW(), 0, '{
+insert into products values (1, NOW(), NOW(), 0, '{
   "name": "Kinto Carat Coffee Dripper and Pot",
   "variants": [
     {
@@ -61,7 +60,7 @@ insert into products values (1, '{5}', NOW(), NOW(), 0, '{
 }'
 );
 
-insert into products values (2, '{6}', NOW(), NOW(), 0, '{
+insert into products values (2, NOW(), NOW(), 0, '{
   "name": "Patagonia Hybrid Jacket",
   "variants": [
     {
@@ -132,7 +131,7 @@ insert into products values (2, '{6}', NOW(), NOW(), 0, '{
 }'
 );
 
-insert into products values (3, '{2}', NOW(), NOW(), 0, '{
+insert into products values (3, NOW(), NOW(), 0, '{
   "name": "Dick Taylor Bars",
   "variants": [
     {

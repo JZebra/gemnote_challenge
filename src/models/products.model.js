@@ -13,10 +13,6 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    category_ids: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-      allowNull: true
-    },
     flags: {
       type: DataTypes.INTEGER,
       allowNull: false,

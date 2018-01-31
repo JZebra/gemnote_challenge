@@ -15,8 +15,7 @@ wrote and tested build_db in Makefile: 325pm
 git init and commit
 feathers generate app with default options, REST only
 fix db table and js model: 430pm
-
-
+attempt to filter by category_ids, decide that current category_ids implementation is bad: 515pm
 
 
 
@@ -24,7 +23,6 @@ Requirements
 - /products
   - GET returns a list of products
   - POST to create a new product
-
 - /products/{product_id}
   - GET one product
 
@@ -63,10 +61,11 @@ https://www.gemnote.com/lookbook/tanner-goods/524
 Misc
 - both patagonia jacket urls link to black
 - repeat of 'glass' in Kinto description
-- made up category ids
 
 TODO
 - sku could be replaced with uuid because we don't actually need to extract any product data from it
 - consider using a 'product_group' table and a 'product' table. Each variant becomes a row in the product table.
 - investigate jsonb indexing in postgres.
--
+- auth (feathers generate auth)
+- add 'product_category' table and 'product_category_membership' table, create many-many relationship.
+- update models to allow querying /products by category
