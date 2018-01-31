@@ -1,0 +1,76 @@
+{
+  "category_ids": [
+    3,
+    4,
+    5
+  ],
+  "data": {
+    "name": "Patagonia Fluffy Vest",
+    "variants": [
+      {
+        "name": "Patagonia Fluffy Vest - Black",
+        "color": "black",
+        "descriptors": [
+          "whoa",
+          "so",
+          "fluffy",
+          "and vesty"
+        ],
+        "images": [
+          {
+            "alt-text": "Patagonia Fluffy Vest - Black",
+            "type": "primary",
+            "url": "https://gemnote-images-production.s3-us-west-2.amazonaws.com/images/images/000/000/899/full_size/patagonia_women_s_adze_hybrid_jacket___black.jpg?1510663389"
+          }
+        ],
+        "sku": "PATAVEST_0001",
+        "unit_price_tiers": [
+          {
+            "0": "189"
+          },
+          {
+            "150": "180"
+          },
+          {
+            "300": "171"
+          },
+          {
+            "500": "160"
+          }
+        ]
+      },
+      {
+        "name": "Patagonia Fluffy Vest - White",
+        "color": "white",
+        "descriptors": [
+          "whoa",
+          "3-layer Polartec Windbloc stretch-woven polyester soft-shell with a DWR (durable water repellent) finish",
+          "Stretchy, breathable, double-weave soft-shell fabric on side panels, underarms and cuffs",
+          "and vesty"
+        ],
+        "images": [
+          {
+            "alt-text": "Patagonia Fluffy Vest - White",
+            "type": "primary",
+            "url": "https://gemnote-images-production.s3-us-west-2.amazonaws.com/images/images/000/000/899/full_size/patagonia_women_s_adze_hybrid_jacket___black.jpg?1510663389"
+          }
+        ],
+        "sku": "PATAVEST_0002",
+        "unit_price_tiers": [
+          {
+            "0": "189"
+          },
+          {
+            "150": "180"
+          },
+          {
+            "300": "171"
+          },
+          {
+            "500": "160"
+          }
+        ]
+      }
+    ]
+  }
+}

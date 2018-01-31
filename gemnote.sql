@@ -1,5 +1,5 @@
 create table products (
-  id integer NOT NULL,
+  id serial PRIMARY KEY,
   category_ids int[],
   created_at timestamptz NOT NULL,
   updated_at timestamptz NOT NULL,
@@ -132,7 +132,7 @@ insert into products values (2, '{6}', NOW(), NOW(), 0, '{
 }'
 );
 
-insert into products values (1, '{2}', NOW(), NOW(), 0, '{
+insert into products values (3, '{2}', NOW(), NOW(), 0, '{
   "name": "Dick Taylor Bars",
   "variants": [
     {

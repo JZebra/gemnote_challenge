@@ -9,8 +9,9 @@ module.exports = function (app) {
   const products = sequelizeClient.define('products', {
     id: {
       primaryKey: true,
+      autoIncrement: true,
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     category_ids: {
       type: DataTypes.ARRAY(DataTypes.INTEGER),
@@ -18,7 +19,8 @@ module.exports = function (app) {
     },
     flags: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: false,
+      defaultValue: 0
     },
     data: {
       type: DataTypes.JSONB,

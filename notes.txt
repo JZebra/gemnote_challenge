@@ -14,6 +14,7 @@ decision to keep postgres: 310pm
 wrote and tested build_db in Makefile: 325pm
 git init and commit
 feathers generate app with default options, REST only
+fix db table and js model: 430pm
 
 
 
