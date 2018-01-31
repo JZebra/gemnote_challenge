@@ -1,10 +1,15 @@
 create table products (
   id integer NOT NULL,
   category_ids int[],
+  created_at timestamptz NOT NULL,
+  updated_at timestamptz NOT NULL,
+  flags integer,
   data jsonb NOT NULL
 );
 
-insert into products values (1, '{5}', '{
+set timezone = 'America/Los_Angeles';
+
+insert into products values (1, '{5}', NOW(), NOW(), 0, '{
   "name": "Kinto Carat Coffee Dripper and Pot",
   "variants": [
     {
@@ -56,7 +61,7 @@ insert into products values (1, '{5}', '{
 }'
 );
 
-insert into products values (2, '{6}', '{
+insert into products values (2, '{6}', NOW(), NOW(), 0, '{
   "name": "Patagonia Hybrid Jacket",
   "variants": [
     {
@@ -127,7 +132,7 @@ insert into products values (2, '{6}', '{
 }'
 );
 
-insert into products values (1, '{2}', '{
+insert into products values (1, '{2}', NOW(), NOW(), 0, '{
   "name": "Dick Taylor Bars",
   "variants": [
     {
