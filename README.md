@@ -1,4 +1,4 @@
-# gemnote
+# Gemnote
 
 > sample backend for gemnote
 
@@ -8,16 +8,28 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 
 ## Getting Started
 
-Getting up and running is as easy as 1, 2, 3.
+1. Install postgres: https://launchschool.com/blog/how-to-install-postgresql-on-a-mac
+    ```
+    brew update
+    brew install postgres
+    brew tap homebrew/services
+    brew services start postgresql
+    ```
 
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
+2. Build the db locally. This will also generate 3 products in the db.
+    ```
+    make build_db
+    ```
+
+3. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed. I've been using nvm for node versioning. There is a .nvmrc specifying the node version.
+
+4. Install your dependencies
 
     ```
     cd path/to/gemnote; npm install
     ```
 
-3. Start your app
+5. Start your app
 
     ```
     npm start
@@ -25,33 +37,22 @@ Getting up and running is as easy as 1, 2, 3.
 
 ## Testing
 
-Simply run `npm test` and all your tests in the `test/` directory will be run.
+I didn't write tests, but `npm run test` will run the tests that were generated from feathers.
+Send the json from new_product.json as a POST request to test adding a product to the db.
 
-## Scaffolding
+## API
 
-Feathers has a powerful command line interface. Here are a few things it can do:
+| URL           | Request       | Action    |
+| ------------- |:-------------:| :----:    |
+| /products                 | GET   | gets all of the products in the db. |
+| /products/{product_id}    | GET   | gets a specific product |
+| /products                 | POST  | create a new product |
 
-```
-$ npm install -g @feathersjs/cli          # Install Feathers CLI
+## TODOs
 
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers generate model                 # Generate a new Model
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
-
-## Changelog
-
-__0.1.0__
-
-- Initial release
-
-## License
-
-Copyright (c) 2016
-
-Licensed under the [MIT license](LICENSE).
+* sku could be replaced with uuid because we don't actually need to extract any product data from it
+* consider using a 'product_group' table and a 'product' table. Each variant becomes a row in the product table.
+* investigate jsonb indexing in postgres.
+* auth (feathers generate auth)
+* add 'product_category' table and 'product_category_membership' table, create many-many relationship.
+* update models to allow querying /products by category

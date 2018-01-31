@@ -16,6 +16,7 @@ git init and commit
 feathers generate app with default options, REST only
 fix db table and js model: 430pm
 attempt to filter by category_ids, decide that current category_ids implementation is bad: 515pm
+writing docs: 535pm
 
 
 
