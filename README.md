@@ -8,7 +8,7 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 
 ## Getting Started
 
-1. Install postgres: https://launchschool.com/blog/how-to-install-postgresql-on-a-mac
+1. You will need postgres >= v9.4. Install postgres: https://launchschool.com/blog/how-to-install-postgresql-on-a-mac
     ```
     brew update
     brew install postgres
